@@ -10,9 +10,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -28,3 +28,19 @@ jobs:
 
       - name: Run oracle eval
         run: python -m harness --provider oracle --out results/oracle.json
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install from the repository, not editable
+        run: pip install .
+
+      - name: Run the installed CLI outside the repository
+        working-directory: /tmp
+        run: python -m harness --provider oracle --out /tmp/oracle.json
