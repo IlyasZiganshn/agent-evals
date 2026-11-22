@@ -1,0 +1,226 @@
+{
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "success_rate": 1.0
+  },
+  "results": [
+    {
+      "id": "01-navigate-docs",
+      "goal": "open the API documentation",
+      "expected": {
+        "tool": "click",
+        "args": {
+          "text": "Docs"
+        }
+      },
+      "actual": {
+        "tool": "click",
+        "args": {
+          "text": "Docs"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "02-type-search",
+      "goal": "search Wikipedia for Jeffrey Epstein",
+      "expected": {
+        "tool": "type_text",
+        "args": {
+          "text": "Jeffrey Epstein"
+        }
+      },
+      "actual": {
+        "tool": "type_text",
+        "args": {
+          "text": "Jeffrey Epstein"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "03-click-cookie-banner",
+      "goal": "dismiss the cookie banner so the page is readable",
+      "expected": {
+        "tool": "click",
+        "args": {
+          "text": "Accept all"
+        }
+      },
+      "actual": {
+        "tool": "click",
+        "args": {
+          "text": "Accept all"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "04-scroll-reviews",
+      "goal": "reach the customer reviews section below the fold",
+      "expected": {
+        "tool": "scroll",
+        "args": {
+          "pixels": 800
+        }
+      },
+      "actual": {
+        "tool": "scroll",
+        "args": {
+          "pixels": 800
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "05-navigate-pricing",
+      "goal": "compare the team plan price",
+      "expected": {
+        "tool": "click",
+        "args": {
+          "text": "Upgrade"
+        }
+      },
+      "actual": {
+        "tool": "click",
+        "args": {
+          "text": "Upgrade"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "06-type-email",
+      "goal": "start a trial with the work email",
+      "expected": {
+        "tool": "type_text",
+        "args": {
+          "text": "ilyas@company.com"
+        }
+      },
+      "actual": {
+        "tool": "type_text",
+        "args": {
+          "text": "ilyas@company.com"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "07-finish-article",
+      "goal": "confirm the article is open",
+      "expected": {
+        "tool": "finish",
+        "args": {
+          "summary": "article is open"
+        }
+      },
+      "actual": {
+        "tool": "finish",
+        "args": {
+          "summary": "article is open"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "08-click-next-page",
+      "goal": "open the second page of search results",
+      "expected": {
+        "tool": "click",
+        "args": {
+          "text": "Next"
+        }
+      },
+      "actual": {
+        "tool": "click",
+        "args": {
+          "text": "Next"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "09-navigate-login",
+      "goal": "open the login page from the home page",
+      "expected": {
+        "tool": "click",
+        "args": {
+          "text": "Log in"
+        }
+      },
+      "actual": {
+        "tool": "click",
+        "args": {
+          "text": "Log in"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "10-scroll-footer",
+      "goal": "reach the footer to find the company address",
+      "expected": {
+        "tool": "scroll",
+        "args": {
+          "pixels": 1200
+        }
+      },
+      "actual": {
+        "tool": "scroll",
+        "args": {
+          "pixels": 1200
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "11-finish-form",
+      "goal": "confirm the account was created",
+      "expected": {
+        "tool": "finish",
+        "args": {
+          "summary": "account created"
+        }
+      },
+      "actual": {
+        "tool": "finish",
+        "args": {
+          "summary": "account created"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": "12-navigate-status",
+      "goal": "check the service status page",
+      "expected": {
+        "tool": "finish",
+        "args": {
+          "summary": "all systems operational"
+        }
+      },
+      "actual": {
+        "tool": "finish",
+        "args": {
+          "summary": "all systems operational"
+        }
+      },
+      "passed": true,
+      "reason": "ok"
+    }
+  ]
+}
