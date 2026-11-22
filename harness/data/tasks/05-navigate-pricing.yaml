@@ -1,0 +1,18 @@
+id: 05-navigate-pricing
+goal: compare the team plan price
+observation:
+  url: https://app.example.com/dashboard
+  text: Logged in dashboard
+  elements:
+    - role: link
+      text: Settings
+    - role: link
+      text: Billing
+    - role: link
+      text: Upgrade
+expected:
+  tool: click
+  args:
+    text: Upgrade
+budget:
+  steps: 2

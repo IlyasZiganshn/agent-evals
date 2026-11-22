@@ -1,0 +1,18 @@
+id: 06-type-email
+goal: start a trial with the work email
+observation:
+  url: https://example.com/signup
+  text: Create your account
+  elements:
+    - role: input
+      text: Work email
+    - role: input
+      text: Password
+    - role: button
+      text: Create account
+expected:
+  tool: type_text
+  args:
+    text: ilyas@company.com
+budget:
+  steps: 1

@@ -8,18 +8,18 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_loads_all_tasks():
-    tasks = load_tasks(ROOT / "tasks")
+    tasks = load_tasks(ROOT / "harness" / "data" / "tasks")
     assert len(tasks) == 12
     assert len({task["id"] for task in tasks}) == 12
 
 
 def test_every_expected_tool_is_supported():
-    tasks = load_tasks(ROOT / "tasks")
+    tasks = load_tasks(ROOT / "harness" / "data" / "tasks")
     assert {task["expected"]["tool"] for task in tasks} <= TOOLS
 
 
 def test_task_prompt_contains_goal_url_and_elements():
-    task = load_tasks(ROOT / "tasks")[0]
+    task = load_tasks(ROOT / "harness" / "data" / "tasks")[0]
     prompt = task_prompt(task)
     assert task["goal"] in prompt
     assert task["observation"]["url"] in prompt

@@ -6,7 +6,7 @@ from harness.providers import constant_provider, openai_provider, oracle_provide
 from harness.runner import render_table, run_all, summarize, write_json
 from harness.tasks import load_tasks
 
-DEFAULT_TASKS = Path(__file__).resolve().parent.parent / "tasks"
+DEFAULT_TASKS = Path(__file__).resolve().parent / "data" / "tasks"
 
 
 def build_provider(args):

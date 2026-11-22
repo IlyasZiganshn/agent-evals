@@ -1,0 +1,16 @@
+id: 10-scroll-footer
+goal: reach the footer to find the company address
+observation:
+  url: https://example.com/about
+  text: Team and mission
+  elements:
+    - role: link
+      text: Careers
+    - role: link
+      text: Contact
+expected:
+  tool: scroll
+  args:
+    pixels: 1200
+budget:
+  steps: 3

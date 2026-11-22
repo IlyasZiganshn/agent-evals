@@ -1,0 +1,16 @@
+id: 04-scroll-reviews
+goal: reach the customer reviews section below the fold
+observation:
+  url: https://shop.example.com/product/42
+  text: Product description, price, add to cart
+  elements:
+    - role: button
+      text: Add to cart
+    - role: link
+      text: Reviews (128)
+expected:
+  tool: scroll
+  args:
+    pixels: 800
+budget:
+  steps: 2

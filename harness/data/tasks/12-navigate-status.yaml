@@ -1,0 +1,16 @@
+id: 12-navigate-status
+goal: check the service status page
+observation:
+  url: https://status.example.com
+  text: All systems operational
+  elements:
+    - role: link
+      text: Incident history
+    - role: link
+      text: Subscribe
+expected:
+  tool: finish
+  args:
+    summary: all systems operational
+budget:
+  steps: 1

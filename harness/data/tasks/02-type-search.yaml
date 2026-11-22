@@ -1,0 +1,18 @@
+id: 02-type-search
+goal: search Wikipedia for Jeffrey Epstein
+observation:
+  url: https://en.wikipedia.org
+  text: The Free Encyclopedia
+  elements:
+    - role: searchbox
+      text: Search Wikipedia
+    - role: link
+      text: Main page
+    - role: link
+      text: Contents
+expected:
+  tool: type_text
+  args:
+    text: Jeffrey Epstein
+budget:
+  steps: 1

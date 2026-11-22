@@ -1,0 +1,16 @@
+id: 11-finish-form
+goal: confirm the account was created
+observation:
+  url: https://example.com/welcome
+  text: Welcome, Ilyas. Your workspace is ready.
+  elements:
+    - role: heading
+      text: Welcome
+    - role: link
+      text: Open dashboard
+expected:
+  tool: finish
+  args:
+    summary: account created
+budget:
+  steps: 1

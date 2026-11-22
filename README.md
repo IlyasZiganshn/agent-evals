@@ -111,7 +111,7 @@ uv run python -m harness \
 
 ## Add a task
 
-1. Copy any file in `tasks/`.
+1. Copy any file in `harness/data/tasks/`.
 2. Write the observation exactly as an agent would see it: url, visible text, elements.
 3. Set the expected tool and args.
 4. Run `python -m harness --provider oracle` and confirm 100 percent.
@@ -123,6 +123,7 @@ uv run python -m harness \
 2. **One action per task.** This isolates the planner from the executor. `browser-agent` owns the loop, this repo owns the decision quality.
 3. **Oracle provider in CI.** The harness tests itself on every push without an API key and without spending tokens.
 4. **Strict scoring.** Args are part of the action. A tool call with the wrong text is a failure, not a near miss.
+5. **Tasks ship inside the package.** `pip install .` gives a working CLI from any directory, and `--tasks` still points at your own folder.
 
 ## Limitations
 
