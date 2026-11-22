@@ -2,7 +2,7 @@
 
 Planner-level eval harness for tool-using agents. Tasks in YAML, one recorded page observation per task, any OpenAI-compatible model, one results table.
 
-![CI](https://github.com/Pinger1456/agent-evals/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/IlyasZiganshn/agent-evals/actions/workflows/ci.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 ![Tasks: 12](https://img.shields.io/badge/tasks-12-green)
@@ -120,7 +120,7 @@ uv run python -m harness \
 ## Design decisions
 
 1. **No browser in the loop.** A benchmark that depends on live sites is not reproducible. Recorded observations make the same task run identically on CI and on a laptop.
-2. **One action per task.** This isolates the planner from the executor. [`ai-browser-agent`](https://github.com/Pinger1456/ai-browser-agent) owns the loop, this repo owns the decision quality.
+2. **One action per task.** This isolates the planner from the executor. [`ai-browser-agent`](https://github.com/IlyasZiganshn/ai-browser-agent) owns the loop, this repo owns the decision quality.
 3. **Oracle provider in CI.** The harness tests itself on every push without an API key and without spending tokens.
 4. **Strict scoring.** Args are part of the action. A tool call with the wrong text is a failure, not a near miss.
 5. **Tasks ship inside the package.** `pip install .` gives a working CLI from any directory, and `--tasks` still points at your own folder.
@@ -134,7 +134,7 @@ uv run python -m harness \
 
 ## Roadmap
 
-See [open issues](https://github.com/Pinger1456/agent-evals/issues): multi step tasks, screenshot observations, cost tracking per run, a public results page.
+See [open issues](https://github.com/IlyasZiganshn/agent-evals/issues): multi step tasks, screenshot observations, cost tracking per run, a public results page.
 
 ## License
 
