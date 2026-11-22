@@ -120,7 +120,7 @@ uv run python -m harness \
 ## Design decisions
 
 1. **No browser in the loop.** A benchmark that depends on live sites is not reproducible. Recorded observations make the same task run identically on CI and on a laptop.
-2. **One action per task.** This isolates the planner from the executor. `browser-agent` owns the loop, this repo owns the decision quality.
+2. **One action per task.** This isolates the planner from the executor. [`ai-browser-agent`](https://github.com/Pinger1456/ai-browser-agent) owns the loop, this repo owns the decision quality.
 3. **Oracle provider in CI.** The harness tests itself on every push without an API key and without spending tokens.
 4. **Strict scoring.** Args are part of the action. A tool call with the wrong text is a failure, not a near miss.
 5. **Tasks ship inside the package.** `pip install .` gives a working CLI from any directory, and `--tasks` still points at your own folder.
