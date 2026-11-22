@@ -1,0 +1,16 @@
+id: 07-finish-article
+goal: confirm the article is open
+observation:
+  url: https://en.wikipedia.org/wiki/Jeffrey_Epstein
+  text: Jeffrey Epstein was an American financier and convicted sex offender
+  elements:
+    - role: heading
+      text: Jeffrey Epstein
+    - role: link
+      text: Edit
+expected:
+  tool: finish
+  args:
+    summary: article is open
+budget:
+  steps: 1

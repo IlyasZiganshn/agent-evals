@@ -1,0 +1,18 @@
+id: 09-navigate-login
+goal: open the login page from the home page
+observation:
+  url: https://example.com
+  text: Welcome
+  elements:
+    - role: link
+      text: Sign up
+    - role: link
+      text: Log in
+    - role: link
+      text: Help
+expected:
+  tool: click
+  args:
+    text: Log in
+budget:
+  steps: 1

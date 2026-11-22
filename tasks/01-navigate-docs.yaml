@@ -1,0 +1,18 @@
+id: 01-navigate-docs
+goal: open the API documentation
+observation:
+  url: https://example.com
+  text: Marketing site for a developer tool
+  elements:
+    - role: link
+      text: Product
+    - role: link
+      text: Docs
+    - role: link
+      text: Pricing
+expected:
+  tool: click
+  args:
+    text: Docs
+budget:
+  steps: 1

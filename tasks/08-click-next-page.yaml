@@ -1,0 +1,18 @@
+id: 08-click-next-page
+goal: open the second page of search results
+observation:
+  url: https://example.com/search?q=agents&page=1
+  text: 10 results
+  elements:
+    - role: link
+      text: Next
+    - role: link
+      text: 2
+    - role: link
+      text: Previous
+expected:
+  tool: click
+  args:
+    text: Next
+budget:
+  steps: 1

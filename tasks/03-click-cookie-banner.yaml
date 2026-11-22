@@ -1,0 +1,18 @@
+id: 03-click-cookie-banner
+goal: dismiss the cookie banner so the page is readable
+observation:
+  url: https://news.example.com/article
+  text: Article text is behind a cookie dialog
+  elements:
+    - role: button
+      text: Accept all
+    - role: button
+      text: Reject all
+    - role: link
+      text: Privacy policy
+expected:
+  tool: click
+  args:
+    text: Accept all
+budget:
+  steps: 1
